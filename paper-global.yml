@@ -118,7 +118,7 @@ timings:
   history-interval: 0
   history-length: 0
   really-enabled: false
-  server-name: PotionMC
+  server-name: ServerHorse
   server-name-privacy: false
   url: https://timings.aikar.co/
   verbose: false
