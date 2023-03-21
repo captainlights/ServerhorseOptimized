@@ -33,7 +33,7 @@ settings:
   log-villager-deaths: true
   log-named-deaths: true
 messages:
-  whitelist: '&eWill return very soon, check at: discord.gg/potionmc'
+  whitelist: '&eServerHorse Hosting - This server is whitelisted'
   unknown-command: Unknown command. Type "/help" for help.
   server-full: '&cThe server is full!'
   outdated-client: '&cYour Client Is Outdated! Please use &b1.9-1.18+'
