@@ -158,7 +158,7 @@ world-settings:
       cavevines-modifier: 100
       glowberry-modifier: 100
     zombie-aggressive-towards-villager: true
-    view-distance: 5
+    view-distance: default
     simulation-distance: 2
     thunder-chance: 100000
     item-despawn-rate: 6000
