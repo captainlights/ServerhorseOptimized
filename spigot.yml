@@ -22,7 +22,7 @@ settings:
   timeout-time: 60
   restart-on-crash: true
   restart-script: ./start.sh
-  netty-threads: 4
+  netty-threads: 8
   attribute:
     maxHealth:
       max: 200048.0
