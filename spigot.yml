@@ -40,7 +40,7 @@ messages:
   outdated-server: '&cThis Server Is Outdated! Please use &b1.9-1.18+'
   restart: The server is restarting. Please be patient during this time.
 advancements:
-  disable-saving: false
+  disable-saving: true
   disabled:
   - '*'
 commands:
