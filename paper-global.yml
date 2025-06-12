@@ -12,29 +12,44 @@
 # Discord: https://discord.gg/papermc
 # Website: https://papermc.io/
 
-_version: 28
-async-chunks:
-  threads: -1
-chunk-loading:
-  autoconfig-send-distance: true
-  enable-frustum-priority: false
-  global-max-chunk-load-rate: -1.0
-  global-max-chunk-send-rate: -1.0
-  global-max-concurrent-loads: 500.0
-  max-concurrent-sends: 16
-  min-load-radius: 2
-  player-max-chunk-load-rate: -1.0
-  player-max-concurrent-loads: 20.0
-  target-player-chunk-send-rate: 1620.0
+_version: 29
+anticheat:
+  obfuscation:
+    items:
+      all-models:
+        also-obfuscate: []
+        dont-obfuscate:
+        - minecraft:lodestone_tracker
+        sanitize-count: true
+      enable-item-obfuscation: false
+      model-overrides:
+        minecraft:elytra:
+          also-obfuscate: []
+          dont-obfuscate:
+          - minecraft:damage
+          sanitize-count: true
+block-updates:
+  disable-chorus-plant-updates: false
+  disable-mushroom-block-updates: false
+  disable-noteblock-updates: false
+  disable-tripwire-updates: false
+chunk-loading-advanced:
+  auto-config-send-distance: true
+  player-max-concurrent-chunk-generates: 0
+  player-max-concurrent-chunk-loads: 0
+chunk-loading-basic:
+  player-max-chunk-generate-rate: -1.0
+  player-max-chunk-load-rate: 100.0
+  player-max-chunk-send-rate: 75.0
 chunk-system:
   gen-parallelism: default
   io-threads: -1
   worker-threads: -1
 collisions:
-  enable-player-collisions: false
-  send-full-pos-for-hard-colliding-entities: false
+  enable-player-collisions: true
+  send-full-pos-for-hard-colliding-entities: true
 commands:
-  fix-target-selector-tag-completion: true
+  ride-command-allow-player-as-vehicle: false
   suggest-player-names-when-null-tab-completions: true
   time-command-affects-all-worlds: false
 console:
@@ -54,8 +69,6 @@ item-validation:
   resolve-selectors-in-books: false
 logging:
   deobfuscate-stacktraces: true
-  log-player-ip-addresses: true
-  use-rgb-for-named-text-colors: true
 messages:
   kick:
     authentication-servers-down: <lang:multiplayer.disconnect.authservers_down>
@@ -69,10 +82,11 @@ misc:
   chat-threads:
     chat-executor-core-size: -1
     chat-executor-max-size: -1
+  client-interaction-leniency-distance: default
+  compression-level: default
   fix-entity-position-desync: true
-  lag-compensate-block-breaking: true
   load-permissions-yml-before-plugins: true
-  max-joins-per-tick: 3
+  max-joins-per-tick: 5
   region-file-cache-size: 256
   strict-advancement-dimension-check: false
   use-alternative-luck-formula: false
@@ -97,10 +111,10 @@ proxies:
   proxy-protocol: false
   velocity:
     enabled: false
-    online-mode: false
-    secret: 
+    online-mode: true
+    secret: ''
 scoreboards:
-  save-empty-scoreboard-teams: false
+  save-empty-scoreboard-teams: true
   track-plugin-scoreboards: false
 spam-limiter:
   incoming-packet-threshold: 300
@@ -108,26 +122,19 @@ spam-limiter:
   recipe-spam-limit: 20
   tab-spam-increment: 1
   tab-spam-limit: 500
-timings:
-  enabled: false
-  hidden-config-entries:
-  - database
-  - settings.bungeecord-addresses
-  - settings.velocity-support.secret
-  - proxies.velocity.secret
-  history-interval: 0
-  history-length: 0
-  really-enabled: false
-  server-name: ServerHorse
-  server-name-privacy: false
-  url: https://timings.aikar.co/
-  verbose: false
+spark:
+  enable-immediately: false
+  enabled: true
 unsupported-settings:
-  allow-grindstone-overstacking: false
   allow-headless-pistons: false
   allow-permanent-block-break-exploits: false
   allow-piston-duplication: false
+  allow-unsafe-end-portal-teleportation: false
+  compression-format: ZLIB
   perform-username-validation: true
+  skip-tripwire-hook-placement-validation: false
+  skip-vanilla-damage-tick-when-shield-blocked: false
+  update-equipment-on-player-actions: true
 watchdog:
   early-warning-delay: 10000
   early-warning-every: 5000
